@@ -8,15 +8,12 @@ body {
     align-items: center;
 }
 
-/* Ensure the scanner container is centered */
 #scanner-container {
     position: relative;
     width: 480px;
     height: 320px;
     border: 2px solid black;
 }
-
-/* In order to place the tracking correctly */
 canvas.drawing,
 canvas.drawingBuffer {
     position: absolute;
@@ -24,14 +21,13 @@ canvas.drawingBuffer {
     top: 0;
 }
 
-/* Centralize the button and the result */
 #btn {
     margin-top: 20px;
-    background-color: #670E10; /* Dark red */
-    color: white; /* Correct property for text color */
+    background-color: #670E10; 
+    color: white; 
     border: none;
     padding: 10px 20px;
-    font-family: "JetBrains Mono", monospace;/* Use imported font */
+    font-family: "JetBrains Mono", monospace;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -40,4 +36,35 @@ canvas.drawingBuffer {
 #result_container {
     font-family: "Segoe UI Semibold";
     font-size: 30px;
+}
+@media (max-width: 768px) {
+    #scanner-container {
+        width: 100%;
+        height: auto; 
+    }
+
+    #btn {
+        font-size: 14px; 
+        padding: 8px 16px; 
+    }
+
+    #result_container {
+        font-size: 24px; 
+    }
+}
+@media (max-width: 480px) {
+    #scanner-container {
+        width: 100%; 
+        height: auto; 
+        border: none; 
+    }
+
+    #btn {
+        font-size: 12px; 
+        padding: 6px 12px; 
+    }
+
+    #result_container {
+        font-size: 20px; 
+    }
 }
